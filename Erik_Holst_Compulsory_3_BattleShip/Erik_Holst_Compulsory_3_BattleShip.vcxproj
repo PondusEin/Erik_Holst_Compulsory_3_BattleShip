@@ -140,6 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Erik_Holst_Compulsory_3_BattleShip.cpp" />
+    <ClCompile Include="Gameplay.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="Password.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gameplay.h" />
+    <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="Password.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
