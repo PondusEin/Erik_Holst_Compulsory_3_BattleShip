@@ -1,6 +1,10 @@
 #pragma once
+#include <iostream>
+#include <string>
 
-#include "password.h"
+void login();
+void newPassword();
+void playBS();
 
 class MainMenu
 {

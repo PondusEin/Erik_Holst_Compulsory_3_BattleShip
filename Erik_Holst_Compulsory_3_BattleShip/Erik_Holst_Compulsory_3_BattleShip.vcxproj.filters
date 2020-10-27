@@ -32,9 +32,6 @@
     <ClInclude Include="Gameplay.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Password.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
