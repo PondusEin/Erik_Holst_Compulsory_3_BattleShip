@@ -5,7 +5,7 @@
 
 int main()
 {
-	//password();
+	//login();
 	srand((unsigned int)time(nullptr));
 	while (true)
 	{

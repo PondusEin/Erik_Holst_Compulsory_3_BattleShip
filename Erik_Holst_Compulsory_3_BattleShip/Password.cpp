@@ -1,7 +1,7 @@
 #include <fstream>
 #include <string>
-#include <vector>
 #include <conio.h>
+#include <vector>
 #include "MainMenu.h"
 
 const char boardPassword[4][4]{
@@ -13,7 +13,7 @@ const char boardPassword[4][4]{
 
 void printBoard() {
 	system("cls");
-	for (size_t i = 0; i < sizeof(boardPassword); i++)
+	for (size_t i = 65; i < sizeof(boardPassword); i++)
 	{
 		for (size_t j = 0; j < sizeof(boardPassword); j++)
 		{

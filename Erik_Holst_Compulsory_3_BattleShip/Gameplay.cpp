@@ -6,6 +6,15 @@ const char BLANK = ' ';
 const char SHIP = 'S';
 const char MISS = 'M';
 const char HIT = 'H';
+void printboard(char board) {
+	for (int i = 0; i < M; i++)
+	{
+		for (int i = 0; i < N; i++)
+		{
+			std::cout << board[M][N];
+		}
+	}
+}
 
 int letterToNumber(char letter) // only big letters
 {
@@ -16,4 +25,5 @@ void playBS() {
 	int numberOfHits;
 	int numberOfShots;
 
+	printboard(board[M][N]);
 }
