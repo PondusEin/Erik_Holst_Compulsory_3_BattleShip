@@ -13,9 +13,9 @@ const char boardPassword[4][4]{
 
 void printBoard() {
 	system("cls");
-	for (size_t i = 0; i < boardPassword; i++)
+	for (size_t i = 0; i < sizeof(boardPassword); i++)
 	{
-		for (size_t j = 0; j < 4; j++)
+		for (size_t j = 0; j < sizeof(boardPassword); j++)
 		{
 
 		}
