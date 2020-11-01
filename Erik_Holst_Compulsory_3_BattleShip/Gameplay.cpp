@@ -6,6 +6,8 @@ const char BLANK = ' ';
 const char SHIP = 'S';
 const char MISS = 'M';
 const char HIT = 'H';
+
+
 void printboard(char board) {
 	for (int i = 0; i < M; i++)
 	{
@@ -15,15 +17,36 @@ void printboard(char board) {
 		}
 	}
 }
+void makeEmptyBoard() {
 
+}
+int randomRow() {
+
+}
+int randomColumn() {
+
+}
+void writeLetters() {
+
+}
+void makeBoard(int numberOfShips) {
+
+}
+void printPlayerBoard() {
+
+}
+void shoot() {
+
+}
+void play() {
+
+}
 int letterToNumber(char letter) // only big letters
 {
 	return static_cast<int>(letter) - 65;
 }
 void playBS() {
-	char board[M][N]; // 2d array with M rows and N columns // you can use vectors too
-	int numberOfHits;
-	int numberOfShots;
+
 
 	printboard(board[M][N]);
 }
