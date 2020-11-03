@@ -8,23 +8,25 @@ const char MISS = 'M';
 const char HIT = 'H';
 
 
-void printboard(char board) {
-	for (int i = 0; i < M; i++)
+void printboard(char board[][6]) {
+	for (int i = 0; i < 6; i++)
 	{
-		for (int i = 0; i < N; i++)
+		std::cout << '|' << i;
+		for (int i = 0; i < 6; i++)
 		{
-			std::cout << board[M][N];
+			std::cout << '_';
 		}
 	}
+	getchar();
 }
 void makeEmptyBoard() {
 
 }
 int randomRow() {
-
+	return 0;
 }
 int randomColumn() {
-
+	return 0;
 }
 void writeLetters() {
 
@@ -48,5 +50,5 @@ int letterToNumber(char letter) // only big letters
 void playBS() {
 
 
-	printboard(board[M][N]);
+	printboard(board);
 }

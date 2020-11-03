@@ -1,6 +1,6 @@
 #pragma once
 
-char board[M][N]; // 2d array with M rows and N columns // you can use vectors too
+char board[6][6]; // 2d array with M rows and N columns // you can use vectors too
 int numberOfHits;
 int numberOfShots;
 

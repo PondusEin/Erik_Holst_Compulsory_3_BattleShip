@@ -148,6 +148,9 @@
     <ClInclude Include="Gameplay.h" />
     <ClInclude Include="MainMenu.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Password.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
