@@ -1,26 +1,46 @@
 #include "Gameplay.h"
 #include "MainMenu.h"
 
-const int M = 6, N = 6;
+const int M{ 6 };
+const int N{ 6 };
 const char BLANK = ' ';
 const char SHIP = 'S';
 const char MISS = 'M';
 const char HIT = 'H';
 
-
-void printboard(char board[][6]) {
-	for (int i = 0; i < 6; i++)
+void writeLetters(int& i) {
+	char letter = i + 65;
+	std::cout << letter;
+	return;
+}
+void printboard(char board[M][N]) {
+	for (int irow = 0; irow < M; irow++)
 	{
-		std::cout << '|' << i;
-		for (int i = 0; i < 6; i++)
+		std::cout << "\t" << irow+1;
+		for (int icol = 0; icol < N; icol++)
 		{
-			std::cout << '_';
+			std::cout << '|' << board[irow][icol];
+			board[irow][icol] = ' ';
+		}
+		std::cout << "|" << std::endl;
+	}
+	std::cout << "\t -------------\n";
+	std::cout << "\t" << ' ';
+	for (int i=0; i < 6; i++)
+	{
+		std::cout << "|";
+		writeLetters(i);
+	}
+	std::cout << '|';
+}
+void makeEmptyBoard(char board[M][N]) {
+	for (int i = 0; i < M; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			board[i][j] = BLANK;
 		}
 	}
-	getchar();
-}
-void makeEmptyBoard() {
-
 }
 int randomRow() {
 	return 0;
@@ -28,10 +48,8 @@ int randomRow() {
 int randomColumn() {
 	return 0;
 }
-void writeLetters() {
 
-}
-void makeBoard(int numberOfShips) {
+void makeBoard(int numberOfShips, char board[M][N]) {
 
 }
 void printPlayerBoard() {
