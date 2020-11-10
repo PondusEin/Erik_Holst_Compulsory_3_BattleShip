@@ -24,7 +24,7 @@ int main()
 			newPassword();
 			break;
 		case 2:
-			playBS();
+			play();
 			break;
 		case 3:
 			return 0;

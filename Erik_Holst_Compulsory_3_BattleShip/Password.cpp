@@ -4,7 +4,7 @@
 #include <vector>
 #include "MainMenu.h"
 
-char boardPassword[4][4]{
+const char boardPassword[4][4]{
 	{'A', 'B', 'C', 'D'},
 	{'E', 'F', 'G', 'H'},
 	{'I', 'J', 'K', 'L'},
@@ -13,9 +13,9 @@ char boardPassword[4][4]{
 
 void printBoard() {
 	system("cls");
-	for (size_t irow = 0; irow < sizeof(boardPassword); irow++)
+	for (size_t irow = 0; irow < 4; irow++)
 	{
-		for (size_t icol = 0; icol < sizeof(boardPassword); icol++)
+		for (size_t icol = 0; icol < 4; icol++)
 		{
 
 		}
@@ -24,7 +24,7 @@ void printBoard() {
 }
 
 void newPassword() {
-	std::ofstream Password{ "Password.txt", std::ofstream::trunc };
+	std::ofstream Password("Password.txt", std::ofstream::trunc );
 
 	Password.close();
 }

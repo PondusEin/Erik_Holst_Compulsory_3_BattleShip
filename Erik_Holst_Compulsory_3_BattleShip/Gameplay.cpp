@@ -13,34 +13,28 @@ void writeLetters(int& i) {
 	std::cout << letter;
 	return;
 }
-void printboard(char board[M][N]) {
+
+void makeEmptyBoard(char board[M][N]) {
 	for (int irow = 0; irow < M; irow++)
 	{
-		std::cout << "\t" << irow+1;
+		std::cout << "\t-+-+-+-+-+-+-+\n";
+		std::cout << "\t" << irow + 1;
 		for (int icol = 0; icol < N; icol++)
 		{
+			board[irow][icol] = BLANK;
 			std::cout << '|' << board[irow][icol];
-			board[irow][icol] = ' ';
 		}
 		std::cout << "|" << std::endl;
 	}
-	std::cout << "\t -------------\n";
+	std::cout << "\t-+-+-+-+-+-+-+\n";
 	std::cout << "\t" << ' ';
-	for (int i=0; i < 6; i++)
+	for (int i = 0; i < 6; i++)
 	{
+
 		std::cout << "|";
 		writeLetters(i);
 	}
 	std::cout << '|';
-}
-void makeEmptyBoard(char board[M][N]) {
-	for (int i = 0; i < M; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
-			board[i][j] = BLANK;
-		}
-	}
 }
 int randomRow() {
 	return 0;
@@ -52,21 +46,19 @@ int randomColumn() {
 void makeBoard(int numberOfShips, char board[M][N]) {
 
 }
+void printboard() {
+	makeEmptyBoard(board);
+}
 void printPlayerBoard() {
 
 }
 void shoot() {
 
 }
-void play() {
-
-}
 int letterToNumber(char letter) // only big letters
 {
 	return static_cast<int>(letter) - 65;
 }
-void playBS() {
-
-
-	printboard(board);
+void play() {
+	printboard();
 }

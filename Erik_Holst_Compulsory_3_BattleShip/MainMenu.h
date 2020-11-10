@@ -4,7 +4,7 @@
 
 void login();
 void newPassword();
-void playBS();
+void play();
 
 class MainMenu
 {
