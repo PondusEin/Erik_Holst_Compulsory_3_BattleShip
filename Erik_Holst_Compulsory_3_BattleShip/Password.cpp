@@ -29,8 +29,18 @@ void newPassword() {
 	Password.close();
 }
 void login() {
-
+	system("cls");
+	std::string password;
 	std::ifstream PasswordFile("Password.txt");
+	PasswordFile >> password;
+	if (password == "" )
+	{
+		newPassword();
+	}
+	else
+	{
+		std::cout << "Enter password: ";
 
+	}
 	PasswordFile.close();
 }
