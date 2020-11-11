@@ -6,7 +6,7 @@
 
 int main()
 {
-	//login();
+	login();
 	srand((unsigned int)time(nullptr));
 	while (true)
 	{
