@@ -1,5 +1,4 @@
-// Erik_Holst_Compulsory_3_BattleShip.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Erik_Holst_Compulsory_3_BattleShip.cpp
 #include "MainMenu.h"
 #include <ctime>
 #include <limits>
@@ -17,7 +16,6 @@ int main()
 			"\n3: Quit"
 			"\nSelect an option (1-3): ";
 		int task;
-	
 		std::cin >> task;
 		while (std::cin.fail())
 		{
@@ -38,7 +36,4 @@ int main()
 			break;
 		}
 	}
-
 }
-	
-

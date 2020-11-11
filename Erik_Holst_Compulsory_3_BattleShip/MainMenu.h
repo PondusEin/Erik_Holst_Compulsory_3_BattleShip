@@ -5,8 +5,6 @@
 void login();
 void newPassword();
 void play();
-
 class MainMenu
 {
 };
-

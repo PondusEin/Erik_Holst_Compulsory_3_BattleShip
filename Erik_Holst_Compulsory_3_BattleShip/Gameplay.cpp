@@ -14,9 +14,7 @@ void writeLetters() {
 	{
 		std::cout << "--";
 	}
-	
 	std::cout << "-\n ";
-
 	for (int i = 0; i < N; i++)
 	{
 		char letter = 65 + i;
@@ -28,6 +26,7 @@ int letterToNumber(char letter) // only big letters
 {
 	return static_cast<int>(letter) - 65;
 }
+
 void makeEmptyBoard(char board[M][N]) {
 	for (int irow = 0; irow < M; irow++)
 	{
@@ -41,6 +40,7 @@ void makeEmptyBoard(char board[M][N]) {
 int randomRow() {
 	return rand() % M;
 }
+
 int randomColumn() {
 	return rand() % N;
 }
@@ -95,19 +95,15 @@ void printPlayerBoard(char board[M][N]) {
 		std::cout << "|\n";
 	}
 }
+
 void shoot(char board[M][N], int& numberOfShips, int& numberOfHits, int& numberOfShots, int& amountOfShots) {
-	
 	std::string shot{ "  " };
 	int shotRow;
 	int shotCol;
-	
 	std::cout << "\nShoot the boats (e.g. B4): ";
 	std::cin >> shot;
-
 	shotCol = letterToNumber(shot[0]);
 	shotRow = M-(shot[1]-48);
-
-
 	if (board[shotRow][shotCol] == SHIP)
 	{
 		numberOfHits++;
@@ -139,10 +135,8 @@ void play() {
 	{
 	//	printboard(board);		//Show the board to view posistions of ships.
 		printPlayerBoard(board);
-
 		writeLetters();
 		shoot(board, numberOfShips, numberOfHits, numberOfShots, amountOfShots);
-
 	} while (numberOfShips > 0 && amountOfShots > 0);
 	if (numberOfShips == 0)
 	{

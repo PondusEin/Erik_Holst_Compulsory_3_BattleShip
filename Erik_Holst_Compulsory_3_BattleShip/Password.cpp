@@ -29,10 +29,8 @@ std::string passwordString(std::string password) {
 	std::string passStringFromUser ="A";
 	int PosX{ 0 };
 	int PosY{ 0 };
-
 	do
 	{
-		//system("cls");
 		printBoard();
 		std::cout << "Move with wasd, WASD or arrow keys. Press Spacebar to exit and confirm password.\n";
 		std::cout << "Input: " << passStringFromUser;
@@ -49,7 +47,6 @@ std::string passwordString(std::string password) {
 				passStringFromUser += boardPassword[PosY][PosX];
 			}
 			break;
-
 		case 'a': case 'A': case 75:
 			if (PosX!=0)
 			{
@@ -74,17 +71,13 @@ std::string passwordString(std::string password) {
 			break;
 		}
 	} while (true);
-	
 }
 
 void newPassword() {
 	std::string password;
 	std::ofstream Password("Password.txt", std::ofstream::trunc );
-
 	Password << passwordString(password);
-
 	Password.close();
-
 	std::cout << "\n\nNew password confirmed. Exit to test the new password." << std::endl;
 	system("pause");
 }
