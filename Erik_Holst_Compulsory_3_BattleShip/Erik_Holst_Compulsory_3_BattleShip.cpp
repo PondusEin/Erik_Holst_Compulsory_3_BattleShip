@@ -2,6 +2,7 @@
 //
 #include "MainMenu.h"
 #include <ctime>
+#include <limits>
 
 int main()
 {
@@ -18,6 +19,11 @@ int main()
 		int task;
 	
 		std::cin >> task;
+		while (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		}
 		switch (task)
 		{
 		case 1:
